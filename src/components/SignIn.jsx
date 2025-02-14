@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const SignIn = () => {
+export const SignIn = () => {
   const [formState, setFormState] = useState({
     username: "",
     password: "",
@@ -18,38 +18,45 @@ const SignIn = () => {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      <form action="" onSubmit={handleSubmit}>
-        <p>
-          <label htmlFor="username">Username:</label>
-          <input
-            type="text"
-            placeholder="Username"
-            name="username"
-            id="username"
-            onChange={handleInput}
-            value={formState.username}
-            required
-          />
-        </p>
-        <p>
-          <label htmlFor="password">Password:</label>
-          <input
-            type="text"
-            placeholder="Password"
-            name="password"
-            id="password"
-            onChange={handleInput}
-            value={formState.password}
-            required
-          />
-        </p>
-        <p>
-          <button type="submit">Login</button>
-        </p>
-      </form>
-    </div>
+    <>
+      <i>SignIn</i>
+      <hr />
+      <div>
+        <h2>Login</h2>
+
+        <form action="" onSubmit={handleSubmit}>
+          <p>
+            <label htmlFor="username">Username:</label>
+            <input
+              type="password"
+              placeholder="Username"
+              name="username"
+              id="username"
+              onChange={handleInput}
+              value={formState.username}
+              required
+            />
+          </p>
+
+          <p>
+            <label htmlFor="password">Password:</label>
+            <input
+              type="password"
+              placeholder="Password"
+              name="password"
+              id="password"
+              onChange={handleInput}
+              value={formState.password}
+              required
+            />
+          </p>
+
+          <p>
+            <button type="submit">Login</button>
+          </p>
+        </form>
+      </div>
+    </>
   );
 };
 

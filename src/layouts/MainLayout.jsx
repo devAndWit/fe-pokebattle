@@ -1,15 +1,21 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "../components/Navbar";
 
-const MainLayout = () => {
-  console.log("TEST");
+import Navbar from "../components/Navbar.jsx";
+import Footer from "../components/Footer.jsx";
+
+export const MainLayout = () => {
   return (
-    <div className="">
+    <>
+      <i className="">ProtectedLayout</i>
+      <hr />
       <Navbar />
-      <main className="">
-        <Outlet />
-      </main>
-    </div>
+      <div>
+        <main className="">
+          <Outlet />
+        </main>
+      </div>
+      <Footer />
+    </>
   );
 };
 

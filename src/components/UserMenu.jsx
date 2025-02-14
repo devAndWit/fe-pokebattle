@@ -1,22 +1,15 @@
 import { Link } from "react-router-dom";
-import userIcon from "../assets/user_icon.png";
 
-const UserMenu = () => {
+export const UserMenu = () => {
   return (
     <>
-      <search>
-        <input type="text" placeholder="Search" className="" />
-      </search>
+      <i>UserMenu</i>
+      <hr />
       <nav>
         <div className="">
-          <div tabIndex={0} role="" className="">
-            <div className="">
-              <img alt="" src={userIcon} />
-            </div>
-          </div>
           <ul tabIndex={0} className="">
             <li>
-              <Link to={"/Home"} className="">
+              <Link to={"/"} className="">
                 Home
               </Link>
             </li>
