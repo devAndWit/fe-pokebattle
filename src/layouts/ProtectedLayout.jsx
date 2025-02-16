@@ -1,12 +1,12 @@
-import { useContext, useEffect } from "react";
-import { AuthContext } from "../contexts/AuthContext";
+import { useEffect } from "react";
+import { useAuth } from "../contexts/AuthContext";
 import { Outlet, useNavigate, useLocation } from "react-router-dom";
 
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 
 const ProtectedLayout = () => {
-  const { isAuthenticated } = useContext(AuthContext);
+  const { isAuthenticated } = useAuth();
   const location = useLocation();
   const excludeLayoutOn = ["/arena"];
 

@@ -4,7 +4,6 @@ import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 
 export const MainLayout = () => {
- 
   return (
     <>
       <i className="">ProtectedLayout</i>

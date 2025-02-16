@@ -1,9 +1,8 @@
-import { Link } from "react-router-dom";
-import { useContext, useState } from "react";
-import { AuthContext } from "../contexts/AuthContext";
+import { Link} from "react-router-dom";
 
 export const VisitorMenu = () => {
   
+
   return (
     <>
       <i>VisitorMenu</i>

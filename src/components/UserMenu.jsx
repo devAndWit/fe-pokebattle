@@ -1,6 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../contexts/AuthContext";
 
 export const UserMenu = () => {
+  const navigate = useNavigate();
+  const { setIsAuthenticated } = useAuth();
+
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+    navigate("/signin");
+  };
+
   return (
     <>
       <i>UserMenu</i>
@@ -35,7 +44,7 @@ export const UserMenu = () => {
               </Link>
             </li>
             <li>
-              <button>Logout</button>
+              <button onClick={handleLogout}>Logout</button>
             </li>
           </ul>
         </div>

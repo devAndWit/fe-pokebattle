@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { signUp } from "../api/authApi";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../contexts/AuthContext";
 
 export const SignUp = () => {
   const [formState, setFormState] = useState({
@@ -9,22 +12,31 @@ export const SignUp = () => {
 
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  const handleInput = (e) => {
-    console.log(formState);
+  const { setIsAuthenticated } = useAuth();
+
+  const navigate = useNavigate();
+
+  const handleInput = async (e) => {
     setFormState((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
-    console.log(formState);
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (confirmPassword.trim() === formState.password.trim()) {
-      console.log(
-        "Password and PasswordConfirm are equal = handleSubmit / function is not implemented"
+      const signUpResponse = await signUp(
+        formState.email,
+        formState.password,
+        formState.username
       );
+
+      if (!signUpResponse.status === 201) {
+        return;
+      }
+      setIsAuthenticated(true);
+      navigate("/signin");
     } else {
-      console.log(
-        "Password and PasswordConfirm are not equal = handleSubmit / function is not implemented"
-      );
+      return;
     }
   };
 
@@ -48,7 +60,6 @@ export const SignUp = () => {
               required
             />
           </p>
-
           <p>
             <label htmlFor="email">Email:</label>
             <input
@@ -61,7 +72,6 @@ export const SignUp = () => {
               required
             />
           </p>
-
           <p>
             <label htmlFor="password">Password:</label>
             <input
@@ -77,7 +87,6 @@ export const SignUp = () => {
               required
             />
           </p>
-
           <p>
             <label htmlFor="passwordConfirm">Password Confirm:</label>
             <input
@@ -94,13 +103,14 @@ export const SignUp = () => {
             />
           </p>
 
-          <p>test@test.com</p>
-          <p>!Password1</p>
-
           <p>
             <button type="submit">Sign Up</button>
           </p>
         </form>
+
+        <p>username1</p>
+        <p>test1@test.com</p>
+        <p>!Password1</p>
       </div>
     </>
   );

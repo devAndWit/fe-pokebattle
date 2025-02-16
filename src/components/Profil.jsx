@@ -4,7 +4,7 @@ export const Profil = () => {
     <>
       <div>
         <h1>Profil</h1>
-        <img src={userIcon} alt="usericon" />
+        <img src={userIcon} alt="usericon" className="smallIcon" />
         <div>
           <p>
             <span>Username:</span>

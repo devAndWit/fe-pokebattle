@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { AuthContext } from "../contexts/AuthContext";
+import { useAuth } from "../contexts/AuthContext";
 
 import { UserMenu } from "./UserMenu.jsx";
 import { VisitorMenu } from "./VisitorMenu.jsx";
 
 export const Navbar = () => {
-  const { isAuthenticated } = useContext(AuthContext);
+  const { isAuthenticated } = useAuth();
 
   return (
     <>
