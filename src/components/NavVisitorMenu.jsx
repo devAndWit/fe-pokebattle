@@ -4,7 +4,7 @@ export const NavVisitorMenu = () => {
   return (
     <>
       <nav>
-        <ul className="">
+        <ul className="UlControl">
           <li>
             <Link to={"/signup"}>Sign Up</Link>
           </li>
