@@ -62,7 +62,10 @@ export async function logout(){
 export async function refreshAccessToken(){
     const refreshToken = localStorage.getItem("refreshToken")
 
-    if(!refreshToken) toast.error("Refresh Token not found")
+    if(!refreshToken) {
+        toast.error("Refresh Token not found")
+        return false;
+    }
 
     try {
         const response = await axios.post(`${import.meta.env.VITE_SERVER_URL}/api/auth/refresh`, {
