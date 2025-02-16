@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext.jsx";
 
-import { UserMenu } from "./NavUserMenu.jsx";
-import { VisitorMenu } from "./NavVisitorMenu.jsx";
+import { NavUserMenu } from "./NavUserMenu.jsx";
+import { NavVisitorMenu } from "./NavVisitorMenu.jsx";
 
 import "./Header/header.css";
 
@@ -18,7 +18,7 @@ export const Header = () => {
           </Link>
         </div>
         <div className="">
-          {isAuthenticated ? <UserMenu /> : <VisitorMenu />}
+          {isAuthenticated ? <NavUserMenu /> : <NavVisitorMenu />}
         </div>
       </header>
     </>

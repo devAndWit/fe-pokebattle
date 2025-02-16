@@ -6,8 +6,6 @@ import { BattleList } from "../components/BattleList.jsx";
 export const Homepage = () => {
   return (
     <>
-      <i className="">Homepage</i>
-      <hr />
       <div>
         <h1>Poke Battle Fight</h1>
         <div>
