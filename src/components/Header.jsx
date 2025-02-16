@@ -12,12 +12,12 @@ export const Header = () => {
   return (
     <>
       <header className="">
-        <div className="">
+        <div className="HeaderLeft">
           <Link to={"/"} className="">
             PokeBattle
           </Link>
         </div>
-        <div className="">
+        <div className="HeaderRight">
           {isAuthenticated ? <NavUserMenu /> : <NavVisitorMenu />}
         </div>
       </header>

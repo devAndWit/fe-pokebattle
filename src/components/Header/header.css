@@ -1,0 +1,10 @@
+header {
+  display: flex;
+  .HeaderLeft {
+    padding: 0 1rem 0 1rem;
+  }
+  .HeaderRight {
+    width: 100%;
+    background-color: green;
+  }
+}
