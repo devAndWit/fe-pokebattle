@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export const VisitorMenu = () => {
+export const NavVisitorMenu = () => {
   return (
     <>
       <nav>
@@ -17,4 +17,4 @@ export const VisitorMenu = () => {
   );
 };
 
-export default VisitorMenu;
+export default NavVisitorMenu;

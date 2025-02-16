@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { Outlet, useNavigate, useLocation } from "react-router-dom";
 
-import Navbar from "../components/Navbar.jsx";
+import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
 
 const ProtectedLayout = () => {
@@ -30,7 +30,7 @@ const ProtectedLayout = () => {
 
   return (
     <>
-      <Navbar />
+      <Header />
       <div>
         <main className="">
           <Outlet />

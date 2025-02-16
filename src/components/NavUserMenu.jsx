@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 
-export const UserMenu = () => {
+export const NavUserMenu = () => {
   const navigate = useNavigate();
   const { setIsAuthenticated } = useAuth();
 
@@ -51,4 +51,4 @@ export const UserMenu = () => {
   );
 };
 
-export default UserMenu;
+export default NavUserMenu;

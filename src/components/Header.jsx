@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth } from "../contexts/AuthContext.jsx";
 
-import { UserMenu } from "./UserMenu.jsx";
-import { VisitorMenu } from "./VisitorMenu.jsx";
+import { UserMenu } from "./NavUserMenu.jsx";
+import { VisitorMenu } from "./NavVisitorMenu.jsx";
 
-export const Navbar = () => {
+import "./Header/header.css";
+
+export const Header = () => {
   const { isAuthenticated } = useAuth();
 
   return (
@@ -23,4 +25,4 @@ export const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;
