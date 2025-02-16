@@ -1,0 +1,30 @@
+footer {
+  display: block;
+  position: absolute;
+  background-color: orange;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  text-align: center;
+
+  span {
+    display: inline-block;
+    font-size: 1rem;
+  }
+
+  .turnLetter {
+    transform: rotate(20deg);
+    animation: spiningLetter 3s infinite alternate ease-in;
+    font-size: 1.2rem;
+  }
+}
+
+@keyframes spiningLetter {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,8 +1,12 @@
+import "./Footer/footer.css";
+
 export const Footer = () => {
   return (
     <>
       <footer>
-        <div>Hier ist ein Footer</div>
+        <span>
+          inspired by <span className="turnLetter">B</span>rains
+        </span>
       </footer>
     </>
   );
