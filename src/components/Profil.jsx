@@ -1,5 +1,11 @@
 import userIcon from "../assets/user_icon.png";
+import { useUser } from "../contexts/UserContext";
+
+
 export const Profil = () => {
+
+  
+
   return (
     <>
       <div>
