@@ -1,16 +1,10 @@
 import userIcon from "../assets/user_icon.png";
-import { useUser } from "../contexts/UserContext";
-
-
 export const Profil = () => {
-
-  
-
   return (
     <>
       <div>
         <h1>Profil</h1>
-        <img src={userIcon} alt="usericon" className="smallIcon" />
+        <img src={userIcon} alt="usericon" className="smallIcon"/>
         <div>
           <p>
             <span>Username:</span>
