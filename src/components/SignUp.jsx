@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { navigate } from "react-router-dom";
 
 export const SignUp = () => {
   const [formState, setFormState] = useState({

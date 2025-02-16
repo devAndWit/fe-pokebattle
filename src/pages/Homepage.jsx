@@ -1,4 +1,7 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { LeaderList } from "../components/LeaderList.jsx";
+import { BattleList } from "../components/BattleList.jsx";
 
 export const Homepage = () => {
   return (
@@ -11,10 +14,12 @@ export const Homepage = () => {
           <h2>LeadshiptBoard</h2>
           <div>
             <div className="missing">Table Top 10 Leadership</div>
+            <LeaderList />
           </div>
           <h2>BattleList</h2>
           <div>
             <div className="missing">Table Top10 BattleList</div>
+            <BattleList />
           </div>
         </div>
         <div>

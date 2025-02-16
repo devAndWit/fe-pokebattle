@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 a {
+  display: inline-block;
+  padding: 0.2rem;
   font-weight: bold;
   color: blue;
 }
@@ -52,6 +54,10 @@ form {
     background-color: whitesmoke;
   }
   button {
+    display: inline-block;
     background-color: burlywood;
+    color: blue;
+    font-weight: bold;
+    padding: 0.2rem;
   }
 }

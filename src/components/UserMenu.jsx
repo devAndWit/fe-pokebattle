@@ -14,8 +14,8 @@ export const UserMenu = () => {
               </Link>
             </li>
             <li>
-              <Link to={"/MyRoster"} className="">
-                My Roster
+              <Link to={"/mypokemon"} className="">
+                mypokemon
               </Link>
             </li>
             <li>
