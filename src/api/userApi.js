@@ -17,7 +17,7 @@ export async function getAllUsers(){
             autoClose: 3000,
         });
     }
-};
+}
 
 export async function getUserById(userId) {
     try {
