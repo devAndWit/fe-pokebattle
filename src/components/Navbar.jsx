@@ -9,8 +9,6 @@ export const Navbar = () => {
 
   return (
     <>
-      <i>Navbar</i>
-      <hr />
       <header className="">
         <div className="">
           <Link to={"/"} className="">

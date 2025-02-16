@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { signIn } from "../api/authApi";
 import { useAuth } from "../contexts/AuthContext";
 
+import "./SignIn/signin.css";
+
 // import { login } from "../contexts/AuthContext";
 
 export const SignIn = () => {
@@ -40,47 +42,48 @@ export const SignIn = () => {
 
   return (
     <>
-      <i>SignIn</i>
-      <hr />
-      <div>
+      <div className="signin">
         <h2>Login</h2>
 
         <form onSubmit={handleSubmit}>
-          <p>
-            <label htmlFor="email">EMail:</label>
-            <input
-              type="email"
-              placeholder="EMail"
-              name="email"
-              id="email"
-              onChange={handleInput}
-              value={formState.email}
-              required
-            />
-          </p>
+          <div className="formContent">
+            
+              <p>
+                <label htmlFor="email">EMail:</label>
+                <input
+                  type="email"
+                  placeholder="EMail"
+                  name="email"
+                  id="email"
+                  onChange={handleInput}
+                  value={formState.email}
+                  required
+                />
+              </p>
 
-          <p>
-            <label htmlFor="password">Password:</label>
-            <input
-              type="password"
-              placeholder="Password"
-              name="password"
-              id="password"
-              onChange={handleInput}
-              value={formState.password}
-              required
-            />
-          </p>
+              <p>
+                <label htmlFor="password">Password:</label>
+                <input
+                  type="password"
+                  placeholder="Password"
+                  name="password"
+                  id="password"
+                  onChange={handleInput}
+                  value={formState.password}
+                  required
+                />
+              </p>
 
-          <p>testuser</p>
-          <p>test@test.com</p>
-          <p>!Password1</p>
-
-          <p>
-            <button type="submit">Login</button>
-            <Link to="/signup">SignUp</Link>
-          </p>
+              <p className="control">
+                <button type="submit">Login</button>
+                <Link to="/signup">SignUp</Link>
+              </p>
+            
+          </div>
         </form>
+        <p>testuser</p>
+        <p>test@test.com</p>
+        <p>!Password1</p>
       </div>
     </>
   );

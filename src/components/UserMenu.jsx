@@ -12,8 +12,6 @@ export const UserMenu = () => {
 
   return (
     <>
-      <i>UserMenu</i>
-      <hr />
       <nav>
         <div className="">
           <ul tabIndex={0} className="">

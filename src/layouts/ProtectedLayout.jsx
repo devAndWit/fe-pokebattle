@@ -30,8 +30,6 @@ const ProtectedLayout = () => {
 
   return (
     <>
-      <i className="">ProtectedLayout</i>
-      <hr />
       <Navbar />
       <div>
         <main className="">
