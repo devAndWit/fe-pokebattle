@@ -44,7 +44,7 @@ export async function getPokemonById(pokemonId){
     try {
         const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/api/pokemon/byId/${pokemonId}`)
 
-        return response.data;
+        return response.data.data;
     } catch (err) {
         toast.error(err.response?.data?.message || "Request error", {
             position: "top-right",

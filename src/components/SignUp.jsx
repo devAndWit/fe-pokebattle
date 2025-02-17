@@ -33,7 +33,6 @@ export const SignUp = () => {
       if (!signUpResponse.status === 201) {
         return;
       }
-      setIsAuthenticated(true);
       navigate("/signin");
     } else {
       return;

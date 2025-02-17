@@ -4,7 +4,7 @@ export const StartFight = () => {
   return (
     <>
       <div>
-        <Link to={"/battlepage"}>Startbattle</Link>
+        <Link to={"/battle"}>Startbattle</Link>
       </div>
     </>
   );
