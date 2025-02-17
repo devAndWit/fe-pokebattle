@@ -10,7 +10,7 @@ import SignIn from "./components/SignIn.jsx";
 //closed user
 import ProtectedLayout from "./layouts/ProtectedLayout";
 import UserPage from "./pages/UserPage.jsx";
-import BattlePage from "./components/BattlePage.jsx";
+import BattleContainer from "./components/BattlePage/BattleContainer.jsx";
 import PokeLuck from "./components/PokeLuck.jsx";
 import ArenaPage from "./pages/ArenaPage.jsx";
 
@@ -38,7 +38,7 @@ function App() {
           }
         >
           <Route index element={<UserPage />} />
-          <Route path="/battle" element={<BattlePage />} />
+          <Route path="/battle" element={<BattleContainer />} />
           <Route path="/luck" element={<PokeLuck />} />
           <Route path="*" element={<div>Seite nicht gefunden</div>} />
           <Route path="/arena" element={<ArenaPage />} />
