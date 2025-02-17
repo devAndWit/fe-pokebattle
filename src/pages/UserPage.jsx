@@ -6,10 +6,12 @@ import StartFight from "../components/StartFight";
 export const UserPage = () => {
   return (
     <>
-      <Profil />
-      <BattleList />
-      <PokeList />
-      <StartFight />
+      <div>
+        <Profil />
+        <BattleList />
+        <PokeList />
+        <StartFight />
+      </div>
     </>
   );
 };

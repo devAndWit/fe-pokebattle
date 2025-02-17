@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import top10 from "../mocks/topUsers.js";
 
+import "./LeaderList/leaderList.css";
+
 export const LeaderList = () => {
   const [topUsers, setTopUsers] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -20,19 +22,30 @@ export const LeaderList = () => {
   if (error) return <p className="text-red-500">{error}</p>;
 
   return (
-    <div>
-      <p className="flex">
-        <span className="w-full">{"Place:"}</span>
-        <span className="w-full text-center">{"Username"}</span>
-        <span className="w-full text-center">{"Rating"}</span>
-      </p>
-      {topUsers.map((user, index) => (
-        <p key={user._id} className="flex">
-          <span className="w-full">{index + 1}.</span>
-          <span className="w-full text-center">{user.username}</span>
-          <span className="w-full text-center">{user.rating}</span>
-        </p>
-      ))}
+    <div className="LeaderListStyle">
+      <h2>LeadshiptBoard</h2>
+      <h3>Table Top 10 Leadership</h3>
+
+      <div className="table">
+        <div className="headline">
+          <div className="row">
+            <div className="cell">{"Place"}</div>
+            <div className="cell">{"Username"}</div>
+            <div className="cell">{"Rating"}</div>
+          </div>
+        </div>
+
+        
+        <div className="data">
+          {topUsers.map((user, index) => (
+            <div key={user._id} className="row">
+              <div className="cell">{index + 1}.</div>
+              <div className="cell">{user.username}</div>
+              <div className="cell">{user.rating}</div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

@@ -5,6 +5,8 @@ import { Outlet, useNavigate, useLocation } from "react-router-dom";
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
 
+import "../components/Layout/layout.css";
+
 const ProtectedLayout = () => {
   const { isAuthenticated } = useAuth();
   const location = useLocation();
@@ -19,11 +21,9 @@ const ProtectedLayout = () => {
   if (excludeLayoutOn.includes(location.pathname)) {
     return (
       <>
-        <div>
-          <main className="">
-            <Outlet />
-          </main>
-        </div>
+        <main className="">
+          <Outlet />
+        </main>
       </>
     );
   }
@@ -31,11 +31,11 @@ const ProtectedLayout = () => {
   return (
     <>
       <Header />
-      <div>
-        <main className="">
-          <Outlet />
-        </main>
-      </div>
+
+      <main className="">
+        <Outlet />
+      </main>
+
       <Footer />
     </>
   );

@@ -32,12 +32,14 @@ export const SignUp = () => {
         formState.username
       );
 
-      if (!signUpResponse.status === 201) {
+      if (!signUpResponse || !signUpResponse.statusText === "ok") {
+        console.log("400: Error in Userregistration.");
         return;
       }
       setIsAuthenticated(true);
       navigate("/signin");
     } else {
+      console.log("500: Error in Userregistration.");
       return;
     }
   };

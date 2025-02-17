@@ -2,8 +2,6 @@ nav {
   ul {
     list-style: none;
   }
-  .UlMenu {
-  }
 
   .UlMenu:before {
     display: block;
@@ -23,12 +21,14 @@ nav {
       a {
         display: block;
         padding: 1rem;
-        transition: 0.3s all;
         min-width: 80px;
         text-align: center;
+        cursor: pointer;
+        transition: 0.3s all;
+        color: white;
 
         &:hover {
-          background-color: blue;
+          background-color: rgb(255, 120, 0);
         }
       }
     }

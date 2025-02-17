@@ -1,0 +1,53 @@
+.LeaderListStyle {
+  margin: 1rem auto 2rem auto;
+
+  h2 {
+    margin-top: 1rem;
+    text-align: center;
+    background-color: orange;
+    padding: 0.5rem;
+  }
+
+  h3 {
+    text-align: center;
+    padding: 1rem;
+    text-decoration: underline;
+  }
+
+  .table {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid black;
+    box-shadow: 8px 8px 16px darkgray;
+
+    .headline {
+      .row {
+        display: flex;
+        background-color: orange;
+      }
+
+      .cell {
+        font-weight: bold;
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem;
+      }
+    }
+
+    .data {
+      .row {
+        &:nth-child(odd) {
+          background-color: rgba(255, 165, 0, 0.5);
+        }
+        display: flex;
+      }
+
+      .cell {
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem;
+      }
+    }
+  }
+}

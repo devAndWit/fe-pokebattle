@@ -1,0 +1,26 @@
+.ControlBar {
+  margin-top: 1rem;
+  display: fleX;
+  gap: 1rem;
+  justify-content: center;
+
+  div {
+    a {
+      width: 100%;
+      display: block;
+      padding: 1rem;
+      background-color: rgba(243, 153, 35, 0.8);
+      color: white;
+      text-align: center;
+      border-radius: 1rem;
+      box-shadow: 8px 8px 16px darkgray;
+      transition: 0.3s all;
+      cursor: pointer;
+      min-width: 150px;
+
+      &:hover {
+        background-color: rgba(243, 153, 35, 1);
+      }
+    }
+  }
+}
