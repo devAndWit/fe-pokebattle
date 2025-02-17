@@ -31,8 +31,10 @@ export async function signIn(email, password) {
     );
 
     if (response.statusText === "OK") {
-      localStorage.setItem("accessToken", response.data.accessToken);
-      localStorage.setItem("refreshToken", response.data.refreshToken);
+      console.log("response: ", response.data);
+      localStorage.setItem("accessToken", response.data.tokens.accessToken);
+      localStorage.setItem("refreshToken", response.data.tokens.refreshToken);
+      localStorage.setItem("userId", response.data.userId);
     }
     return response.data;
   } catch (err) {

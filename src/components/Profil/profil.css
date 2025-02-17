@@ -1,6 +1,4 @@
 .Profil {
-  background-color: green;
-
   h1 {
     text-align: center;
     font-size: 2rem;
@@ -16,18 +14,20 @@
     }
 
     .UserInfo {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
+      max-width: 500px;
+      width: 100%;
       p {
         display: flex;
-        max-width: 400px;
+        flex-direction: row;
 
-        background-color: pink;
+        gap: 1rem;
+
         span {
+          &:first-child {
+            text-align: center;
+          }
+          display: block;
           width: 100%;
-          background-color: blue;
           padding: 1rem;
         }
       }

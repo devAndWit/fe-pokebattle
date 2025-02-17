@@ -30,9 +30,10 @@ function App() {
       ) : (
         /* Layout für authentifizierte Nutzer */
         <Route
+          path="/"
           element={
             <>
-              <ProtectedLayout />{" "}
+              <ProtectedLayout />
             </>
           }
         >

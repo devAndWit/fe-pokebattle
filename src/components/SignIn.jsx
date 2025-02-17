@@ -33,7 +33,7 @@ export const SignIn = () => {
       }
 
       setIsAuthenticated(true);
-      navigate("/");
+      navigate(`/`);
     } catch (error) {
       console.log(error);
       setIsAuthenticated(false);
