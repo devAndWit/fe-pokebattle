@@ -111,9 +111,11 @@ export const SignUp = () => {
           </div>
         </form>
 
-        <p>username1</p>
-        <p>test1@test.com</p>
-        <p>!Password1</p>
+        <div className="free">
+          <p>testuser</p>
+          <p>test@test.com</p>
+          <p>!Password1</p>
+        </div>
       </div>
     </>
   );

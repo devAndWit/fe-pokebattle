@@ -1,0 +1,36 @@
+.Profil {
+  background-color: green;
+
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  .ProfilContent {
+    display: flex;
+    padding: 1rem;
+    img {
+      width: 10rem;
+      height: 10rem;
+    }
+
+    .UserInfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      p {
+        display: flex;
+        max-width: 400px;
+
+        background-color: pink;
+        span {
+          width: 100%;
+          background-color: blue;
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}

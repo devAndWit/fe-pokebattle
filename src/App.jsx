@@ -32,8 +32,7 @@ function App() {
         <Route
           element={
             <>
-              <b>private</b>
-              <ProtectedLayout />
+              <ProtectedLayout />{" "}
             </>
           }
         >

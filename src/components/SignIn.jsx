@@ -47,43 +47,43 @@ export const SignIn = () => {
 
         <form onSubmit={handleSubmit}>
           <div className="formContent">
-            
-              <p>
-                <label htmlFor="email">EMail:</label>
-                <input
-                  type="email"
-                  placeholder="EMail"
-                  name="email"
-                  id="email"
-                  onChange={handleInput}
-                  value={formState.email}
-                  required
-                />
-              </p>
+            <p>
+              <label htmlFor="email">EMail:</label>
+              <input
+                type="email"
+                placeholder="EMail"
+                name="email"
+                id="email"
+                onChange={handleInput}
+                value={formState.email}
+                required
+              />
+            </p>
 
-              <p>
-                <label htmlFor="password">Password:</label>
-                <input
-                  type="password"
-                  placeholder="Password"
-                  name="password"
-                  id="password"
-                  onChange={handleInput}
-                  value={formState.password}
-                  required
-                />
-              </p>
+            <p>
+              <label htmlFor="password">Password:</label>
+              <input
+                type="password"
+                placeholder="Password"
+                name="password"
+                id="password"
+                onChange={handleInput}
+                value={formState.password}
+                required
+              />
+            </p>
 
-              <p className="control">
-                <button type="submit">Login</button>
-                <Link to="/signup">SignUp</Link>
-              </p>
-            
+            <p className="control">
+              <button type="submit">Login</button>
+              <Link to="/signup">SignUp</Link>
+            </p>
           </div>
         </form>
-        <p>testuser</p>
-        <p>test@test.com</p>
-        <p>!Password1</p>
+        <div className="free">
+          <p>testuser</p>
+          <p>test@test.com</p>
+          <p>!Password1</p>
+        </div>
       </div>
     </>
   );

@@ -63,3 +63,7 @@
     }
   }
 }
+
+.free {
+  user-select: all;
+}
