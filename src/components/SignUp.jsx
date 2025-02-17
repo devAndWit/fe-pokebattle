@@ -36,7 +36,6 @@ export const SignUp = () => {
         console.log("400: Error in Userregistration.");
         return;
       }
-      setIsAuthenticated(true);
       navigate("/signin");
     } else {
       console.log("500: Error in Userregistration.");

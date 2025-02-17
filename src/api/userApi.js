@@ -78,7 +78,7 @@ export async function getUserPokemonList(userId) {
             }
         })
 
-        return response.data;
+        return response.data.pokemonList;
     } catch (err) {
         toast.error(err.response?.data?.message || "Request error", {
             position: "top-right",
